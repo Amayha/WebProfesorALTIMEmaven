@@ -20,7 +20,12 @@ public class Calendario {
 	PImage mes;
 	PImage aviso;
 	PImage aviso2;
+	PImage aviso11;
+	PImage aviso12;
+	PImage aviso13;
 	PImage mes2;
+	PImage mes16;
+	PImage mes20;
 	PImage evento;
 	PImage fondoGris;
 	PImage fondoFijo;
@@ -145,7 +150,15 @@ public class Calendario {
 		if (diaSeleccionado == true) {
 			app.image(rectC, 112, 121);
 			app.image(add, 157, 27);
-			app.image(mes2, 401, 121);
+			
+			if(contadorEventos == 16) {
+				app.image(mes16, 401, 121);
+			}
+			
+			if(contadorEventos == 20) {
+				app.image(mes20, 401, 121);
+			}
+			
 		}
 		System.out.println("Pantalla 2");
 	}
@@ -153,7 +166,7 @@ public class Calendario {
 	public void pantalla3() {
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		app.image(mes2, 401, 121);
+		app.image(mes20, 401, 121);
 
 		// paso 2 oprimir agregar a ese dia
 		// sin ninguna seleccion
@@ -169,11 +182,17 @@ public class Calendario {
 		// espacio de consulta en resaltado.
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		app.image(mes2, 401, 121);
+		if(contadorEventos == 16) {
+			app.image(mes16, 401, 121);
+		}
+		
+		if(contadorEventos == 20) {
+			app.image(mes20, 401, 121);
+		}
 		if (diaSeleccionado == true && oprimirAgregar == true) {
 			app.image(fondoGris, 86, 0);
-			// cambiar la imagen de aviso
-			app.image(aviso, 408, 240);
+			
+			app.image(aviso11, 408, 240);
 		}
 		System.out.println("Pantalla 4");
 	}
@@ -183,11 +202,17 @@ public class Calendario {
 		// reserva de espacio en resaltado.
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		app.image(mes2, 401, 121);
+		if(contadorEventos == 16) {
+			app.image(mes16, 401, 121);
+		}
+		
+		if(contadorEventos == 20) {
+			app.image(mes20, 401, 121);
+		}
 		if (diaSeleccionado == true && oprimirAgregar == true) {
 			app.image(fondoGris, 86, 0);
 			// cambiar la imagen de aviso
-			app.image(aviso, 408, 240);
+			app.image(aviso12, 408, 240);
 		}
 		System.out.println("Pantalla 5");
 	}
@@ -197,11 +222,17 @@ public class Calendario {
 		// cancelar clase en resaltado.
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		app.image(mes2, 401, 121);
+		if(contadorEventos == 16) {
+			app.image(mes16, 401, 121);
+		}
+		
+		if(contadorEventos == 20) {
+			app.image(mes20, 401, 121);
+		}
 		if (diaSeleccionado == true && oprimirAgregar == true) {
 			app.image(fondoGris, 86, 0);
-			// cambiar la imagen de aviso
-			app.image(aviso, 408, 240);
+		
+			app.image(aviso13, 408, 240);
 		}
 		System.out.println("Pantalla 6");
 	}
@@ -566,7 +597,12 @@ public class Calendario {
 		add = app.loadImage("Group.png");
 		mes = app.loadImage("Group 7.2.png");
 		mes2 = app.loadImage("calendario2.png");
+		mes16 = app.loadImage("mes16.png");
+		mes20 = app.loadImage("mes20.png");
 		aviso = app.loadImage("aviso1.png");
+		aviso11 = app.loadImage("aviso11.png");
+		aviso12 = app.loadImage("aviso12.png");
+		aviso13 = app.loadImage("aviso13.png");
 		aviso2 = app.loadImage("aviso2.png");
 		fondoGris = app.loadImage("fondoGris.png");
 		fondoFijo = app.loadImage("fondoFijo.png");
