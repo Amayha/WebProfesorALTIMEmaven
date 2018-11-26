@@ -12,7 +12,7 @@ import processing.core.PImage;
 public class Calendario {
 
 	// Prueba
-	
+
 	PApplet app;
 	Logica log;
 	PImage rectC;
@@ -150,15 +150,15 @@ public class Calendario {
 		if (diaSeleccionado == true) {
 			app.image(rectC, 112, 121);
 			app.image(add, 157, 27);
-			
-			if(contadorEventos == 16) {
+
+			if (contadorEventos == 16) {
 				app.image(mes16, 401, 121);
 			}
-			
-			if(contadorEventos == 20) {
+
+			if (contadorEventos == 20) {
 				app.image(mes20, 401, 121);
 			}
-			
+
 		}
 		System.out.println("Pantalla 2");
 	}
@@ -182,16 +182,16 @@ public class Calendario {
 		// espacio de consulta en resaltado.
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		if(contadorEventos == 16) {
+		if (contadorEventos == 16) {
 			app.image(mes16, 401, 121);
 		}
-		
-		if(contadorEventos == 20) {
+
+		if (contadorEventos == 20) {
 			app.image(mes20, 401, 121);
 		}
 		if (diaSeleccionado == true && oprimirAgregar == true) {
 			app.image(fondoGris, 86, 0);
-			
+
 			app.image(aviso11, 408, 240);
 		}
 		System.out.println("Pantalla 4");
@@ -202,11 +202,11 @@ public class Calendario {
 		// reserva de espacio en resaltado.
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		if(contadorEventos == 16) {
+		if (contadorEventos == 16) {
 			app.image(mes16, 401, 121);
 		}
-		
-		if(contadorEventos == 20) {
+
+		if (contadorEventos == 20) {
 			app.image(mes20, 401, 121);
 		}
 		if (diaSeleccionado == true && oprimirAgregar == true) {
@@ -222,16 +222,16 @@ public class Calendario {
 		// cancelar clase en resaltado.
 		app.image(rectC, 112, 121);
 		app.image(add, 157, 27);
-		if(contadorEventos == 16) {
+		if (contadorEventos == 16) {
 			app.image(mes16, 401, 121);
 		}
-		
-		if(contadorEventos == 20) {
+
+		if (contadorEventos == 20) {
 			app.image(mes20, 401, 121);
 		}
 		if (diaSeleccionado == true && oprimirAgregar == true) {
 			app.image(fondoGris, 86, 0);
-		
+
 			app.image(aviso13, 408, 240);
 		}
 		System.out.println("Pantalla 6");
@@ -290,17 +290,11 @@ public class Calendario {
 		case 7:
 			mousePantalla7();
 			break;
-			
+
 		case 8:
 			mousePantalla8();
 			break;
 
-		}
-
-		// condicion para el boton de home
-		// Debe estar en todas las pantallas
-		if (app.mouseX >= 27 && app.mouseX <= 57 && app.mouseY >= 147 && app.mouseY <= 173) {
-			log.setPantalla(1);
 		}
 
 	}
@@ -559,7 +553,7 @@ public class Calendario {
 			espacioConsulta = false;
 			reservaEspacio = false;
 			cancelacion = false;
-			
+
 			System.out.println("Pantalla 7 pasa a la pantalla: " + pantalla);
 		}
 	}
