@@ -1,3 +1,7 @@
+import java.awt.Image;
+import java.io.InputStream;
+
+import gifAnimation.Gif;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -10,14 +14,21 @@ public class Logica {
 	private int encima;
 	private PImage nav, barra, cuaLog, casa, casa2, estu, cal, cal2, ojo, lupa, buscador, login;
 	private boolean contra, usuario;
+	private Gif nonLoopingGif, barras, lineas;
+	boolean pause, reproducir;
 
 	public Logica(PApplet app) {
 		this.app = app;
-
 		pantalla = 0;
+		pause = false;
+		reproducir = false;
 		home = new Home(app, this);
 		calen = new Calendario(app, this);
 		us = new Usuario(app);
+		nonLoopingGif = new Gif(app, "coso.gif");
+		barras = new Gif(app, "barras.gif");
+		lineas = new Gif(app, "lineas.gif");
+
 		buscador = app.loadImage("buscador.png");
 		lupa = app.loadImage("buscar.png");
 		nav = app.loadImage("barra-nav.png");
@@ -66,6 +77,14 @@ public class Logica {
 			break;
 		case 1:
 			home.pintar();
+			app.image(nonLoopingGif, 190, 350);
+			app.image(barras, 190, 130);
+			app.image(lineas, 490, 360);
+			app.textSize(12);
+			app.fill(30);
+			app.text("Rendimiento Por Materia", 570, 375);
+
+
 			break;
 		case 2:
 			calen.pintar();
@@ -111,6 +130,12 @@ public class Logica {
 			if (app.mouseX > 505 && app.mouseX < 680 && app.mouseY > 450 && app.mouseY < 508 && usuario == true
 					&& contra == true) {
 				pantalla++;
+				nonLoopingGif.play();
+				nonLoopingGif.ignoreRepeat();
+				barras.play();
+				barras.ignoreRepeat();
+				lineas.play();
+				lineas.ignoreRepeat();
 			}
 			if (app.mouseX > 456 && app.mouseX < 560 && app.mouseY > 390 && app.mouseY < 410) {
 				contra = true;
@@ -161,4 +186,5 @@ public class Logica {
 
 		}
 	}
+
 }
