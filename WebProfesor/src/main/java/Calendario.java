@@ -64,14 +64,14 @@ public class Calendario {
 		n16 = new Noticia();
 		n16.setDiasemana("LUN");
 		n16.setNumerodia("16");
-		n16.setIdnoticia("88888");
+		n16.setIdnoticia("11111");
 		n16.setTexto("");
 		n16.setTiponoticia("1");
 
 		n20 = new Noticia();
 		n20.setDiasemana("VIE");
 		n20.setNumerodia("20");
-		n20.setIdnoticia("99999");
+		n20.setIdnoticia("22222");
 		n20.setTexto("");
 		n20.setTiponoticia("1");
 
